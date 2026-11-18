@@ -1,0 +1,1503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#21001f">
+<title>Happy Floor DJ Sound | Pilani</title>
+<meta name="description" content="Explore 8 premium DJ sound and lighting setups by Happy Floor DJ Sound, Pilani.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#170016;
+  --panel:#290022;
+  --panel2:#39002f;
+  --pink:#a90070;
+  --pink2:#e00091;
+  --yellow:#eaff00;
+  --white:#fff;
+  --muted:#c7afc3;
+  --border:rgba(255,255,255,.12);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:Montserrat,sans-serif;
+  overflow-x:hidden;
+}
+button,a{font-family:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+.container{width:min(1250px,92%);margin:auto}
+
+/* NAVBAR */
+
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(25,0,23,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+.navbar{
+  height:76px;display:flex;
+  justify-content:space-between;align-items:center;
+}
+.brand{font-size:23px;font-weight:900;letter-spacing:-1px}
+.brand span{color:var(--yellow)}
+.brand small{
+  display:block;font-size:8px;
+  letter-spacing:3px;color:#c9a9c3;margin-top:4px;
+}
+.nav-links{display:flex;align-items:center;gap:27px}
+.nav-links a{font-size:10px;font-weight:800;transition:.2s}
+.nav-links a:hover{color:var(--yellow)}
+.nav-links .nav-highlight{
+  background:var(--yellow);color:#180018;
+  padding:11px 18px;border-radius:30px;
+}
+.menu-toggle{
+  display:none;background:var(--yellow);
+  color:#170016;border:0;border-radius:8px;
+  padding:8px 13px;font-size:20px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:490px;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  background:
+  linear-gradient(90deg,rgba(20,0,20,.97),rgba(35,0,32,.73),rgba(20,0,20,.35)),
+  url("videos/Setup-1/cover.jpg") center/cover;
+}
+.hero-content{padding:85px 0;max-width:760px}
+.eyebrow{
+  color:var(--yellow);font-size:10px;
+  letter-spacing:3px;font-weight:900;
+}
+.hero h1{
+  font-size:clamp(49px,8vw,88px);
+  font-weight:900;line-height:.98;
+  letter-spacing:-4px;margin:23px 0;
+}
+.hero h1 span{color:var(--yellow)}
+.hero p{
+  max-width:520px;font-size:12px;
+  line-height:2;color:#e4cde0;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
+
+.btn{
+  display:inline-flex;align-items:center;
+  justify-content:center;gap:8px;
+  padding:13px 21px;border-radius:30px;
+  border:0;font-size:10px;font-weight:900;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-yellow{background:var(--yellow);color:#160016}
+.btn-outline{border:1px solid #b99ab3;color:white;background:transparent}
+.btn-outline:hover{border-color:var(--yellow);color:var(--yellow)}
+
+/* GENERAL SECTIONS */
+
+section{scroll-margin-top:90px}
+.section{padding:75px 0}
+.section-heading{margin-bottom:32px}
+.section-heading .eyebrow{font-size:9px}
+.section-heading h2{
+  font-size:clamp(29px,5vw,43px);
+  letter-spacing:-1.5px;margin-top:12px;
+}
+.section-heading p{
+  color:var(--muted);font-size:11px;
+  line-height:1.9;margin-top:10px;
+}
+
+/* SETUP GRID */
+
+.setup-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.setup-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:13px;
+  overflow:hidden;
+  transition:.3s;
+  cursor:pointer;
+}
+.setup-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--pink2);
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+.card-image{
+  height:235px;position:relative;
+  overflow:hidden;background:#33002d;
+}
+.card-image img{
+  height:100%;width:100%;
+  object-fit:cover;transition:.45s;
+}
+.setup-card:hover .card-image img{transform:scale(1.06)}
+.setup-number{
+  position:absolute;top:13px;left:13px;
+  background:var(--yellow);color:#180018;
+  border-radius:30px;padding:8px 12px;
+  font-size:9px;font-weight:900;
+}
+.card-media-count{
+  position:absolute;bottom:12px;right:12px;
+  background:rgba(0,0,0,.75);
+  padding:8px 11px;border-radius:30px;
+  font-size:9px;
+}
+.card-content{padding:19px}
+.card-content h3{font-size:16px;margin-bottom:8px}
+.card-category{
+  color:var(--yellow);font-size:9px;
+  font-weight:800;letter-spacing:1px;
+}
+.card-content p{
+  font-size:10px;color:var(--muted);
+  line-height:1.8;margin-top:10px;
+}
+.card-price{
+  border-top:1px solid var(--border);
+  margin-top:16px;padding-top:14px;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:8px;
+}
+.price-preview strong{
+  display:block;color:var(--yellow);font-size:14px;
+}
+.price-preview small{font-size:9px;color:var(--muted)}
+.card-open{
+  background:var(--yellow);color:#180018;
+  border:0;border-radius:25px;
+  padding:10px 14px;font-size:9px;font-weight:900;
+}
+
+/* EQUIPMENT */
+
+.equipment-section{background:#250020}
+.equipment-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:15px;
+}
+.equipment-box{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:23px 18px;border-radius:12px;
+}
+.equipment-box .symbol{font-size:27px;color:var(--yellow)}
+.equipment-box h3{font-size:13px;margin:13px 0 8px}
+.equipment-box p{font-size:10px;line-height:1.8;color:var(--muted)}
+
+/* CONTACT */
+
+.contact-section{padding:70px 0}
+.contact-box{
+  padding:40px;
+  background:linear-gradient(120deg,#68004e,#2d0028);
+  border:1px solid var(--border);
+  border-radius:17px;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:25px;
+}
+.contact-box h2{font-size:clamp(25px,4vw,40px);margin-top:12px}
+.contact-box p{font-size:11px;color:#ddc0d6;line-height:1.8;margin-top:10px}
+
+footer{background:#100010;border-top:1px solid var(--border);padding:26px 0}
+.footer-inner{
+  display:flex;justify-content:space-between;
+  gap:15px;flex-wrap:wrap;
+  font-size:10px;color:#bd9bb5;
+}
+
+/* SLIDING SETUP DRAWER */
+
+.overlay{
+  position:fixed;inset:0;z-index:100;
+  background:rgba(0,0,0,.78);
+  opacity:0;visibility:hidden;transition:.3s;
+}
+.overlay.active{opacity:1;visibility:visible}
+
+.drawer{
+  position:fixed;right:0;top:0;
+  width:min(650px,100%);
+  height:100dvh;
+  z-index:101;
+  background:#20001d;
+  border-left:1px solid var(--border);
+  display:flex;flex-direction:column;
+  transform:translateX(105%);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.drawer.active{transform:translateX(0)}
+
+.drawer-header{
+  flex-shrink:0;
+  padding:17px 23px;
+  border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;
+  align-items:center;gap:10px;
+}
+.drawer-header small{
+  color:var(--yellow);font-size:9px;
+  font-weight:900;letter-spacing:2px;
+}
+.drawer-header h2{font-size:19px;margin-top:6px}
+.close-btn{
+  width:39px;height:39px;flex-shrink:0;
+  border:1px solid var(--border);
+  border-radius:50%;background:#45003b;
+  color:white;font-size:24px;
+}
+.drawer-content{flex:1;overflow-y:auto;padding:20px 22px}
+.drawer-description{
+  color:var(--muted);font-size:11px;
+  line-height:1.9;margin-bottom:20px;
+}
+.drawer-label{
+  font-size:10px;color:var(--yellow);
+  font-weight:900;letter-spacing:1.5px;
+  margin-bottom:13px;
+}
+
+/* SLIDING MEDIA GALLERY */
+
+.gallery-frame{
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+  background:#080008;
+  border:1px solid var(--border);
+}
+.gallery-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-slide{
+  flex:0 0 100%;
+  width:100%;
+  scroll-snap-align:center;
+  position:relative;
+  background:#080008;
+}
+.gallery-slide img,
+.gallery-slide video{
+  display:block;
+  width:100%;
+  height:350px;
+  object-fit:contain;
+  background:#080008;
+}
+.gallery-slide img{cursor:zoom-in}
+.slide-caption{
+  padding:12px 15px;
+  background:#30002a;
+  font-size:10px;
+  color:#e5c9df;
+}
+.slide-caption span{color:var(--yellow);font-weight:900}
+.gallery-arrow{
+  position:absolute;top:43%;
+  width:37px;height:37px;
+  border-radius:50%;border:1px solid #ffffff55;
+  background:#160016bb;color:white;
+  font-size:20px;z-index:3;
+}
+.gallery-arrow:hover{background:var(--yellow);color:#180018}
+.gallery-arrow.prev{left:12px}
+.gallery-arrow.next{right:12px}
+.gallery-position{
+  display:flex;justify-content:center;
+  gap:7px;padding:13px;
+}
+.gallery-dot{
+  height:6px;width:6px;border-radius:10px;
+  background:#88617f;transition:.2s;
+}
+.gallery-dot.active{width:20px;background:var(--yellow)}
+.gallery-count{
+  text-align:center;color:var(--muted);
+  font-size:9px;margin-bottom:22px;
+}
+
+/* EQUIPMENT LIST IN DRAWER */
+
+.specification-box{
+  background:#300029;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:18px;margin-top:20px;
+}
+.specification-box h3{
+  font-size:12px;color:var(--yellow);
+  margin-bottom:14px;letter-spacing:1px;
+}
+.spec-list{list-style:none;display:grid;gap:11px}
+.spec-list li{
+  display:flex;justify-content:space-between;
+  gap:15px;font-size:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #ffffff12;
+}
+.spec-list li:last-child{border:0;padding-bottom:0}
+.spec-list span:first-child{color:#d3b7cd}
+.spec-list strong{text-align:right;color:white}
+.spec-note{
+  font-size:9px;color:var(--muted);
+  line-height:1.7;margin-top:14px;
+}
+
+/* TWO DAY PRICING */
+
+.pricing-box{
+  margin-top:20px;
+  background:#38002e;
+  border:1px solid rgba(234,255,0,.3);
+  border-radius:12px;padding:18px;
+}
+.pricing-box h3{font-size:12px;margin-bottom:14px}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.price-option{
+  background:#24001f;
+  padding:15px 12px;border-radius:9px;
+}
+.price-option small{font-size:9px;color:var(--muted)}
+.price-option strong{
+  display:block;font-size:21px;
+  color:var(--yellow);margin-top:8px;
+}
+.price-option span{font-size:9px;color:#c5a9c1}
+
+/* DRAWER NAVIGATION */
+
+.setup-navigation{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;margin-top:20px;
+}
+.setup-navigation button{
+  background:#39002f;
+  color:white;border:1px solid var(--border);
+  padding:12px;border-radius:8px;
+  font-size:10px;font-weight:800;
+}
+.setup-navigation button:disabled{opacity:.3;cursor:not-allowed}
+.drawer-footer{
+  flex-shrink:0;
+  padding:15px 20px;
+  background:#160014;
+  border-top:1px solid var(--border);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.drawer-footer button{width:100%;min-height:46px}
+
+/* IMAGE LIGHTBOX */
+
+.lightbox{
+  position:fixed;inset:0;z-index:150;
+  background:rgba(0,0,0,.96);
+  display:none;align-items:center;justify-content:center;
+  padding:20px;
+}
+.lightbox.active{display:flex}
+.lightbox img{
+  max-width:95%;max-height:88dvh;
+  object-fit:contain;
+}
+.lightbox button{
+  position:absolute;top:18px;right:18px;
+  height:42px;width:42px;border:0;
+  border-radius:50%;font-size:23px;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+  .setup-grid{grid-template-columns:repeat(2,1fr)}
+  .equipment-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px){
+  .navbar{height:67px}
+  .brand{font-size:19px}
+  .menu-toggle{display:block}
+  .nav-links{
+    display:none;position:absolute;
+    top:67px;left:4%;right:4%;
+    padding:20px;background:#300029;
+    border:1px solid var(--border);
+    border-radius:12px;
+    flex-direction:column;align-items:stretch;
+    gap:20px;
+  }
+  .nav-links.open{display:flex}
+  .hero{min-height:475px;background-position:57% center}
+  .hero-content{padding:65px 0}
+  .hero h1{font-size:clamp(43px,12vw,65px);letter-spacing:-2px}
+  .section{padding:53px 0}
+  .setup-grid{grid-template-columns:1fr;gap:18px}
+  .card-image{height:245px}
+  .equipment-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-box{display:block;padding:27px}
+  .contact-box .btn{margin-top:20px}
+  .footer-inner{flex-direction:column}
+  .drawer{width:100%;border:0}
+  .drawer-header{padding:13px 17px}
+  .drawer-content{padding:17px}
+  .gallery-slide img,.gallery-slide video{height:260px}
+  .drawer-footer{padding:12px}
+}
+
+@media(max-width:370px){
+  .card-price{align-items:flex-start}
+  .card-open{padding:9px}
+  .price-option strong{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#" class="brand">
+      HAPPY <span>FLOOR</span> DJ
+      <small>SOUND · LIGHT · CELEBRATION</small>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">HOME</a>
+      <a href="#setups">SETUPS</a>
+      <a href="#services">SERVICES</a>
+      <a href="#contact">CONTACT</a>
+      <a href="#setups" class="nav-highlight">EXPLORE ↗</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">PROFESSIONAL DJ SOUND & EVENT PRODUCTION</div>
+    <h1>FEEL THE<br><span>BEAT.</span><br>LIVE THE NIGHT.</h1>
+    <p>
+      Powerful sound. Spectacular lighting. Unforgettable celebrations.
+      Explore our collection of professionally designed DJ setups
+      and find the perfect experience for your event.
+    </p>
+    <div class="hero-actions">
+      <a href="#setups" class="btn btn-yellow">EXPLORE SETUPS ↗</a>
+      <a href="#contact" class="btn btn-outline">CONTACT US</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ALL 8 SETUPS -->
+
+<section class="section" id="setups">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">OUR COLLECTION</div>
+      <h2>Find your perfect setup.</h2>
+      <p>
+        Explore our eight exclusive DJ arrangements.
+        Every setup includes its own gallery, live videos,
+        equipment specifications and transparent pricing.
+      </p>
+    </div>
+    <div class="setup-grid" id="setupGrid"></div>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section equipment-section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">OUR SERVICES</div>
+      <h2>Everything in one experience.</h2>
+      <p>Every item is positioned and arranged according to the selected setup design.</p>
+    </div>
+
+    <div class="equipment-grid">
+      <div class="equipment-box">
+        <div class="symbol">♫</div>
+        <h3>Professional Sound</h3>
+        <p>Powerful speakers, line-array speakers and bass systems.</p>
+      </div>
+      <div class="equipment-box">
+        <div class="symbol">✦</div>
+        <h3>Lighting Effects</h3>
+        <p>CRP lights, PAR lights and coordinated stage lighting.</p>
+      </div>
+      <div class="equipment-box">
+        <div class="symbol">◉</div>
+        <h3>Special Effects</h3>
+        <p>Fog machines, bubble makers and mirror-ball arrangements.</p>
+      </div>
+      <div class="equipment-box">
+        <div class="symbol">▦</div>
+        <h3>Truss & Stage</h3>
+        <p>Single-sided and 4×4 tower structures with custom arrangements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <div class="eyebrow">LET'S MAKE IT UNFORGETTABLE</div>
+        <h2>Your event. Our sound.</h2>
+        <p>Contact Happy Floor DJ Sound for bookings, pricing and availability.</p>
+      </div>
+      <a class="btn btn-yellow"
+         href="https://wa.me/919529102585?text=Hello%20Happy%20Floor%20DJ%20Sound"
+         target="_blank">WHATSAPP US ↗</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> HAPPY FLOOR DJ SOUND</span>
+    <span>PILANI, RAJASTHAN · INDIA</span>
+    <span>POWERED BY MUSIC ♫</span>
+  </div>
+</footer>
+
+
+<!-- SLIDING DRAWER -->
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="drawer" id="drawer">
+
+  <div class="drawer-header">
+    <div>
+      <small id="drawerNumber">SETUP 01</small>
+      <h2 id="drawerTitle">Setup Name</h2>
+    </div>
+    <button class="close-btn" id="closeDrawer">×</button>
+  </div>
+
+  <div class="drawer-content">
+
+    <p class="drawer-description" id="drawerDescription"></p>
+
+    <div class="drawer-label">PHOTO & VIDEO GALLERY</div>
+
+    <div class="gallery-frame">
+      <button class="gallery-arrow prev" id="galleryPrev">‹</button>
+      <div class="gallery-track" id="galleryTrack"></div>
+      <button class="gallery-arrow next" id="galleryNext">›</button>
+    </div>
+
+    <div class="gallery-position" id="galleryDots"></div>
+    <div class="gallery-count" id="galleryCount"></div>
+
+    <div class="specification-box">
+      <h3>⚙ EQUIPMENT SPECIFICATIONS</h3>
+      <ul class="spec-list" id="specList"></ul>
+      <p class="spec-note">
+        All equipment is positioned and arranged according to
+        the selected setup design. Final placement follows the
+        actual design shown in the gallery.
+      </p>
+    </div>
+
+    <div class="pricing-box">
+      <h3>BOOKING PRICE</h3>
+      <div class="pricing-grid">
+        <div class="price-option">
+          <small>ONE DAY</small>
+          <strong id="priceOne">₹13,000</strong>
+          <span>1 Day Booking</span>
+        </div>
+        <div class="price-option">
+          <small>TWO DAYS</small>
+          <strong id="priceTwo">₹21,000</strong>
+          <span>2 Days Booking</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="setup-navigation">
+      <button id="previousSetup">← PREVIOUS SETUP</button>
+      <button id="nextSetup">NEXT SETUP →</button>
+    </div>
+
+  </div>
+
+  <div class="drawer-footer">
+    <button class="btn btn-yellow" id="whatsappBtn">WHATSAPP INQUIRY ↗</button>
+    <button class="btn btn-outline" id="shareBtn">SHARE SETUP ↗</button>
+  </div>
+
+</aside>
+
+
+<!-- IMAGE LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+  <button id="closeLightbox">×</button>
+  <img src="" id="lightboxImage" alt="DJ setup enlarged photo">
+</div>
+
+
+<script>
+
+/* ==========================================
+   BUSINESS INFORMATION
+========================================== */
+
+const BUSINESS = {
+  name: "Happy Floor DJ Sound",
+  phone: "919529102585",
+  location: "Pilani, Rajasthan"
+};
+
+
+/* ==========================================
+   SETUP DATABASE
+
+   All media is stored together in each setup.
+   Paths are relative to index.html.
+
+   Image and video files remain in their
+   original Setup-1 ... Setup-8 folders.
+========================================== */
+
+const setups = [
+
+{
+  id:1,
+  name:"Classic DJ Setup",
+  category:"CLASSIC COLLECTION",
+
+  description:
+  "A beautifully arranged DJ setup with coordinated sound, lighting and stage elements. Designed for an attractive and energetic event experience.",
+
+  priceOne:13000,
+  priceTwo:21000,
+
+  specs:[
+    ["CRP Lights","2"],
+    ["Speakers","4"],
+    ["Base / Subwoofer","1"],
+    ["Mirror Ball","1"],
+    ["PAR Lights","12"],
+    ["Tower","Single-sided tower"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-1/cover.jpg",title:"Setup Cover"},
+    {type:"image",src:"videos/Setup-1/IMG-20241008-WA000.jpg",title:"Setup View 01"},
+    {type:"image",src:"videos/Setup-1/IMG-20241008-WA0008.jpg",title:"Setup View 02"},
+    {type:"video",src:"videos/Setup-1/13-21.mp4",title:"Live Setup Demo"}
+  ]
+},
+
+{
+  id:2,
+  name:"Premium DJ Setup",
+  category:"PREMIUM COLLECTION",
+
+  description:
+  "An upgraded sound and lighting arrangement with additional speakers and a fog machine, designed for a more immersive event atmosphere.",
+
+  priceOne:15000,
+  priceTwo:25000,
+
+  specs:[
+    ["CRP Lights","2"],
+    ["Speakers","6"],
+    ["Base / Subwoofer","1"],
+    ["Mirror Ball","1"],
+    ["PAR Lights","12"],
+    ["Fog Machine","1"],
+    ["Tower","Single-sided tower"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-2/cover.jpg",title:"Setup Cover"},
+    {type:"image",src:"videos/Setup-2/IMG_20231208_152248.jpg",title:"Setup View 01"},
+    {type:"image",src:"videos/Setup-2/IMG-20231130-WA0003.jpg",title:"Setup View 02"},
+    {type:"image",src:"videos/Setup-2/IMG-20240114-WA0001.jpg",title:"Setup View 03"},
+    {type:"image",src:"videos/Setup-2/IMG-20240204-WA0000.jpg",title:"Setup View 04"},
+    {type:"image",src:"videos/Setup-2/IMG-20240204-WA0002.jpg",title:"Setup View 05"},
+    {type:"image",src:"videos/Setup-2/IMG-20240204-WA0003.jpg",title:"Setup View 06"},
+    {type:"image",src:"videos/Setup-2/IMG-20240204-WA0004.jpg",title:"Setup View 07"},
+    {type:"image",src:"videos/Setup-2/IMG-20240511-WA0003.jpg",title:"Setup View 08"},
+
+    {type:"video",src:"videos/Setup-2/15-25.mp4",title:"Live Demo 01"},
+    {type:"video",src:"videos/Setup-2/15--25.mp4",title:"Live Demo 02"},
+    {type:"video",src:"videos/Setup-2/VID-20230214-WA0005.mp4",title:"Live Demo 04"},
+    {type:"video",src:"videos/Setup-2/VID-20230503-WA0005.mp4",title:"Live Demo 05"},
+    {type:"video",src:"videos/Setup-2/VID-20230512-WA0006.mp4",title:"Live Demo 06"},
+    {type:"video",src:"videos/Setup-2/VID-20231124-WA0000.mp4",title:"Live Demo 07"},
+    {type:"video",src:"videos/Setup-2/VID-20231124-WA0002.mp4",title:"Live Demo 08"}
+  ]
+},
+
+{
+  id:3,
+  name:"Advanced DJ Setup",
+  category:"ADVANCED COLLECTION",
+
+  description:
+  "A stronger lighting and sound arrangement featuring additional CRP lights, six speakers and a fog machine.",
+
+  priceOne:18000,
+  priceTwo:31000,
+
+  specs:[
+    ["CRP Lights","4"],
+    ["Speakers","6"],
+    ["Base / Subwoofer","1"],
+    ["Mirror Ball","1"],
+    ["PAR Lights","12"],
+    ["Fog Machine","1"],
+    ["Tower","Single-sided tower"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-3/cover.jpg",title:"Setup Cover"},
+    {type:"image",src:"videos/Setup-3/IMG-20231211-WA0009.jpg",title:"Setup View"},
+    {type:"video",src:"videos/Setup-3/18-31.mp4",title:"Live Demo 01"},
+    {type:"video",src:"videos/Setup-3/18--31.mp4",title:"Live Demo 02"}
+  ]
+},
+
+{
+  id:4,
+  name:"Royal Dual Layer Setup",
+  category:"ROYAL COLLECTION",
+
+  description:
+  "A dual-layer single-sided tower arrangement with enhanced lighting, fog and bubble effects for a distinctive stage design.",
+
+  priceOne:21000,
+  priceTwo:31000,
+
+  specs:[
+    ["CRP Lights","4"],
+    ["Speakers","4–6"],
+    ["Base / Subwoofer","1–2"],
+    ["Mirror Ball","1"],
+    ["Bubble Maker Machine","1"],
+    ["PAR Lights","18–20"],
+    ["Fog Machine","1"],
+    ["Tower","Single-sided, dual layer"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-4/cover.jpg",title:"Setup Cover"},
+    {type:"image",src:"videos/Setup-4/image.jpg",title:"Setup View"},
+    {type:"video",src:"videos/Setup-4/21-31.mp4",title:"Live Setup Demo"}
+  ]
+},
+
+{
+  id:5,
+  name:"Grand 4×4 Tower Setup",
+  category:"GRAND COLLECTION",
+
+  description:
+  "A grand 4×4 tower arrangement with multiple speaker and lighting combinations, two mirror balls and special effects. Available with or without ring.",
+
+  priceOne:25000,
+  priceTwo:40000,
+
+  specs:[
+    ["CRP Lights","4–6"],
+    ["Speakers","4 + 2 liner speakers"],
+    ["Base / Subwoofer","2"],
+    ["Mirror Balls","2"],
+    ["PAR Lights","16–24"],
+    ["Fog Machine","1"],
+    ["Bubble Maker Machine","1"],
+    ["Tower","4×4, with or without ring"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-5/cover.webp",title:"Setup Cover"},
+    {type:"image",src:"videos/Setup-5/IMG20241121153504.jpg",title:"Setup View 01"},
+    {type:"image",src:"videos/Setup-5/IMG20241206150325.jpg",title:"Setup View 02"},
+    {type:"image",src:"videos/Setup-5/IMG20241206150342.jpg",title:"Setup View 03"},
+    {type:"image",src:"videos/Setup-5/IMG20241206150403.jpg",title:"Setup View 04"},
+    {type:"image",src:"videos/Setup-5/IMG20241206151103.jpg",title:"Setup View 05"},
+    {type:"image",src:"videos/Setup-5/IMG20241206151113.jpg",title:"Setup View 06"},
+    {type:"image",src:"videos/Setup-5/IMG20241206151146.jpg",title:"Setup View 07"},
+    {type:"image",src:"videos/Setup-5/IMG20241206151300.jpg",title:"Setup View 08"},
+    {type:"image",src:"videos/Setup-5/Instagram - 1757588184894(WEBP).webp",title:"Additional View 01"},
+    {type:"image",src:"videos/Setup-5/null_1(WEBP).webp",title:"Additional View 02"},
+    {type:"image",src:"videos/Setup-5/null_2(WEBP).webp",title:"Additional View 03"},
+    {type:"video",src:"videos/Setup-5/25-40.mp4",title:"Live Demo 01"},
+    {type:"video",src:"videos/Setup-5/25---40.mp4",title:"Live Demo 02"}
+  ]
+},
+
+{
+  id:6,
+  name:"Elite 4×4 Tower Setup",
+  category:"ELITE COLLECTION",
+
+  description:
+  "An elite sound arrangement with additional line speakers, powerful lighting, mirror-ball effects and a complete 4×4 tower.",
+
+  priceOne:30000,
+  priceTwo:40000,
+
+  specs:[
+    ["CRP Lights","4"],
+    ["Speakers","4 + 4–6 liner speakers"],
+    ["Base / Subwoofer","2"],
+    ["Mirror Balls","1–2"],
+    ["PAR Lights","18–24"],
+    ["Fog Machine","1"],
+    ["Bubble Maker Machine","Included"],
+    ["Tower","4×4 tower"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-6/cover.png",title:"Setup Cover"},
+    {type:"video",src:"videos/Setup-6/30-40.mp4",title:"Live Demo 01"},
+    {type:"video",src:"videos/Setup-6/30--40.mp4",title:"Live Demo 02"}
+  ]
+},
+
+{
+  id:7,
+  name:"Signature Ring Tower Setup",
+  category:"SIGNATURE COLLECTION",
+
+  description:
+  "A signature 4×4 ring tower arrangement with eight CRP lights, additional line speakers and a spectacular special-effects combination.",
+
+  priceOne:30000,
+  priceTwo:45000,
+
+  specs:[
+    ["CRP Lights","8"],
+    ["Speakers","6–8 + 2 liner speakers"],
+    ["Base / Subwoofer","1–2"],
+    ["Mirror Balls","1–2"],
+    ["PAR Lights","18–24"],
+    ["Fog Machine","1"],
+    ["Bubble Maker Machine","Included"],
+    ["Tower","4×4 tower with ring"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-7/cover.jpg",title:"Setup Cover"},
+    {type:"image",src:"videos/Setup-7/IMG_20240102_104626.jpg",title:"Setup View 01"},
+    {type:"image",src:"videos/Setup-7/IMG-20231204-WA0001.jpg",title:"Setup View 02"},
+    {type:"image",src:"videos/Setup-7/IMG-20231204-WA0002.jpg",title:"Setup View 03"},
+    {type:"image",src:"videos/Setup-7/IMG-20240225-WA0027.jpg",title:"Setup View 04"},
+    {type:"video",src:"videos/Setup-7/30--45.mp4",title:"Live Demo 01"},
+    {type:"video",src:"videos/Setup-7/30--45.mp4",title:"Live Demo 02"},
+    {type:"videos/Setup-7/VID_20240101_214238.mp4",title:"Live Demo 04"},
+    {type:"video",src:"videos/Setup-7/VID-20230515-WA0004.mp4",title:"Live Demo 06"},
+    {type:"video",src:"videos/Setup-7/VID-20230527-WA0022.mp4",title:"Live Demo 07"},
+    {type:"video",src:"videos/Setup-7/VID-20230527-WA0024.mp4",title:"Live Demo 08"},
+    {type:"video",src:"videos/Setup-7/VID-20230527-WA0026.mp4",title:"Live Demo 09"},
+    {type:"video",src:"videos/Setup-7/VID-20240103-WA0003.mp4",title:"Live Demo 10"},
+    {type:"video",src:"videos/Setup-7/VID-20240225-WA0029.mp4",title:"Live Demo 11"}
+  ]
+},
+
+{
+  id:8,
+  name:"Ultimate 4×4 Tower Setup",
+  category:"ULTIMATE COLLECTION",
+
+  description:
+  "The ultimate stage arrangement with twelve CRP lights, six speakers, two line speakers and a complete 4×4 tower with special effects.",
+
+  priceOne:30000,
+  priceTwo:50000,
+
+  specs:[
+    ["CRP Lights","12"],
+    ["Speakers","6 + 2 liner speakers"],
+    ["Base / Subwoofer","1–2"],
+    ["Mirror Balls","1–2"],
+    ["PAR Lights","18–24"],
+    ["Fog Machine","1"],
+    ["Bubble Maker Machine","Included"],
+    ["Tower","4×4 tower"]
+  ],
+
+  media:[
+    {type:"image",src:"videos/Setup-8/cover.png",title:"Setup Cover"},
+    {type:"video",src:"videos/Setup-8/35-50.mp4",title:"Live Setup Demo"}
+  ]
+}
+
+];
+
+
+/* ==========================================
+   GLOBAL ELEMENTS
+========================================== */
+
+const grid = document.getElementById("setupGrid");
+const drawer = document.getElementById("drawer");
+const overlay = document.getElementById("overlay");
+const galleryTrack = document.getElementById("galleryTrack");
+
+let currentSetup = null;
+let currentMediaIndex = 0;
+
+
+/* ==========================================
+   FORMATTING
+========================================== */
+
+function money(value){
+  return "₹" + value.toLocaleString("en-IN");
+}
+
+
+/* ==========================================
+   CREATE HOMEPAGE CARDS
+========================================== */
+
+function renderCards(){
+
+  grid.innerHTML = "";
+
+  setups.forEach(setup=>{
+
+    const cover = setup.media.find(m=>m.title==="Setup Cover");
+
+    const photos = setup.media.filter(m=>m.type==="image").length;
+    const videos = setup.media.filter(m=>m.type==="video").length;
+
+    const card = document.createElement("article");
+    card.className = "setup-card";
+
+    card.innerHTML = `
+      <div class="card-image">
+        <img src="${cover.src}" alt="${setup.name}" loading="lazy">
+        <span class="setup-number">SETUP ${String(setup.id).padStart(2,"0")}</span>
+        <span class="card-media-count">${photos} PHOTOS · ${videos} VIDEOS</span>
+      </div>
+
+      <div class="card-content">
+        <div class="card-category">${setup.category}</div>
+        <h3>${setup.name}</h3>
+        <p>${setup.description}</p>
+
+        <div class="card-price">
+          <div class="price-preview">
+            <strong>${money(setup.priceOne)}</strong>
+            <small>Starting · 1 day</small>
+          </div>
+          <button class="card-open">EXPLORE ↗</button>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click",()=>openSetup(setup.id));
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* ==========================================
+   OPEN SLIDING DRAWER
+========================================== */
+
+function openSetup(id){
+
+  currentSetup = setups.find(s=>s.id===id);
+
+  if(!currentSetup)return;
+
+  currentMediaIndex = 0;
+
+  document.getElementById("drawerNumber").textContent =
+    "SETUP "+String(currentSetup.id).padStart(2,"0")
+    +" · "+currentSetup.category;
+
+  document.getElementById("drawerTitle").textContent =
+    currentSetup.name;
+
+  document.getElementById("drawerDescription").textContent =
+    currentSetup.description;
+
+  document.getElementById("priceOne").textContent =
+    money(currentSetup.priceOne);
+
+  document.getElementById("priceTwo").textContent =
+    money(currentSetup.priceTwo);
+
+  renderSpecifications();
+  renderGallery();
+
+  document.getElementById("previousSetup").disabled =
+    currentSetup.id===1;
+
+  document.getElementById("nextSetup").disabled =
+    currentSetup.id===8;
+
+  drawer.classList.add("active");
+  overlay.classList.add("active");
+  document.body.style.overflow="hidden";
+
+  history.replaceState(null,"","#setup-"+currentSetup.id);
+
+}
+
+
+/* ==========================================
+   EQUIPMENT SPECIFICATIONS
+========================================== */
+
+function renderSpecifications(){
+
+  const list=document.getElementById("specList");
+
+  list.innerHTML="";
+
+  currentSetup.specs.forEach(item=>{
+
+    const li=document.createElement("li");
+
+    const name=document.createElement("span");
+    name.textContent=item[0];
+
+    const value=document.createElement("strong");
+    value.textContent=item[1];
+
+    li.append(name,value);
+    list.appendChild(li);
+
+  });
+
+}
+
+
+/* ==========================================
+   BUILD MEDIA SLIDER
+========================================== */
+
+function renderGallery(){
+
+  galleryTrack.innerHTML="";
+
+  const dots=document.getElementById("galleryDots");
+  dots.innerHTML="";
+
+  currentSetup.media.forEach((media,index)=>{
+
+    const slide=document.createElement("div");
+    slide.className="gallery-slide";
+
+    let element;
+
+    if(media.type==="image"){
+
+      element=document.createElement("img");
+      element.src=media.src;
+      element.alt=media.title;
+      element.loading="lazy";
+
+      element.addEventListener("click",()=>{
+        openLightbox(media.src);
+      });
+
+    }else{
+
+      element=document.createElement("video");
+      element.src=media.src;
+      element.controls=true;
+      element.preload="metadata";
+      element.playsInline=true;
+
+    }
+
+    const caption=document.createElement("div");
+    caption.className="slide-caption";
+
+    const type=document.createElement("span");
+    type.textContent=media.type.toUpperCase()+" · ";
+
+    caption.append(type,document.createTextNode(media.title));
+
+    slide.append(element,caption);
+    galleryTrack.appendChild(slide);
+
+    const dot=document.createElement("div");
+    dot.className="gallery-dot"+(index===0?" active":"");
+
+    dot.addEventListener("click",()=>goToMedia(index));
+
+    dots.appendChild(dot);
+
+  });
+
+  updateGalleryControls();
+
+}
+
+
+/* ==========================================
+   MEDIA SLIDING
+========================================== */
+
+function goToMedia(index){
+
+  if(!currentSetup)return;
+
+  const max=currentSetup.media.length-1;
+
+  currentMediaIndex=Math.max(0,Math.min(index,max));
+
+  // Pause videos from previous slide
+  galleryTrack.querySelectorAll("video").forEach(video=>{
+    video.pause();
+  });
+
+  const slide=galleryTrack.children[currentMediaIndex];
+
+  slide.scrollIntoView({
+    behavior:"smooth",
+    block:"nearest",
+    inline:"start"
+  });
+
+  updateGalleryControls();
+
+}
+
+function updateGalleryControls(){
+
+  if(!currentSetup)return;
+
+  const total=currentSetup.media.length;
+
+  document.getElementById("galleryPrev").disabled =
+    currentMediaIndex===0;
+
+  document.getElementById("galleryNext").disabled =
+    currentMediaIndex===total-1;
+
+  document.getElementById("galleryCount").textContent =
+    "MEDIA "+(currentMediaIndex+1)+" / "+total;
+
+  [...document.getElementById("galleryDots").children]
+    .forEach((dot,index)=>{
+      dot.classList.toggle("active",index===currentMediaIndex);
+    });
+
+}
+
+document.getElementById("galleryPrev").onclick=()=>{
+  goToMedia(currentMediaIndex-1);
+};
+
+document.getElementById("galleryNext").onclick=()=>{
+  goToMedia(currentMediaIndex+1);
+};
+
+
+/* Update index when user swipes the gallery */
+
+let scrollTimer;
+
+galleryTrack.addEventListener("scroll",()=>{
+
+  clearTimeout(scrollTimer);
+
+  scrollTimer=setTimeout(()=>{
+
+    const width=galleryTrack.clientWidth;
+
+    if(!width)return;
+
+    currentMediaIndex=Math.max(
+      0,
+      Math.min(
+        Math.round(galleryTrack.scrollLeft/width),
+        currentSetup.media.length-1
+      )
+    );
+
+    updateGalleryControls();
+
+  },90);
+
+});
+
+
+/* ==========================================
+   PREVIOUS / NEXT SETUP
+========================================== */
+
+document.getElementById("previousSetup").onclick=()=>{
+
+  if(currentSetup && currentSetup.id>1){
+    openSetup(currentSetup.id-1);
+  }
+
+};
+
+document.getElementById("nextSetup").onclick=()=>{
+
+  if(currentSetup && currentSetup.id<8){
+    openSetup(currentSetup.id+1);
+  }
+
+};
+
+
+/* ==========================================
+   CLOSE DRAWER
+========================================== */
+
+function closeDrawer(){
+
+  galleryTrack.querySelectorAll("video").forEach(video=>{
+    video.pause();
+  });
+
+  drawer.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.style.overflow="";
+
+  history.replaceState(null,"",window.location.pathname+window.location.search);
+
+}
+
+document.getElementById("closeDrawer").onclick=closeDrawer;
+overlay.onclick=closeDrawer;
+
+
+/* ==========================================
+   WHATSAPP INQUIRY
+========================================== */
+
+function getSetupMessage(setup){
+
+  const specs=setup.specs
+    .map(item=>`• ${item[0]}: ${item[1]}`)
+    .join("\n");
+
+  const demo=setup.media.find(m=>m.type==="video");
+
+  const demoLink=demo
+    ?new URL(demo.src,window.location.href).href
+    :"Available on website";
+
+  const galleryLink=window.location.origin+
+    window.location.pathname+"#setup-"+setup.id;
+
+  return `Hello ${BUSINESS.name}!
+
+I am interested in booking this DJ setup.
+
+SETUP DETAILS
+Setup: ${setup.name}
+Category: ${setup.category}
+
+EQUIPMENT
+${specs}
+
+BOOKING PRICES
+1 Day: ${money(setup.priceOne)}
+2 Days: ${money(setup.priceTwo)}
+
+Demo video:
+${demoLink}
+
+Gallery:
+${galleryLink}
+
+Please share availability and booking details.
+
+Thank you!`;
+
+}
+
+document.getElementById("whatsappBtn").onclick=()=>{
+
+  if(!currentSetup)return;
+
+  const message=getSetupMessage(currentSetup);
+
+  const url="https://wa.me/"+BUSINESS.phone+
+    "?text="+encodeURIComponent(message);
+
+  window.open(url,"_blank");
+
+};
+
+
+/* ==========================================
+   SHARE SETUP
+========================================== */
+
+async function shareCurrentSetup(){
+
+  if(!currentSetup)return;
+
+  const setup=currentSetup;
+
+  const message=getSetupMessage(setup);
+
+  const shareURL=window.location.origin+
+    window.location.pathname+"#setup-"+setup.id;
+
+  const data={
+    title:setup.name+" | "+BUSINESS.name,
+    text:message,
+    url:shareURL
+  };
+
+  try{
+
+    if(navigator.share && navigator.canShare &&
+       navigator.canShare({title:data.title,text:data.text,url:data.url})){
+
+      await navigator.share(data);
+
+    }else{
+
+      await navigator.clipboard.writeText(message);
+
+      alert("Setup details copied successfully!");
+
+    }
+
+  }catch(error){
+
+    if(error.name!=="AbortError"){
+      try{
+        await navigator.clipboard.writeText(message);
+        alert("Setup details copied!");
+      }catch(e){
+        prompt("Copy setup details:",message);
+      }
+    }
+
+  }
+
+}
+
+document.getElementById("shareBtn").onclick=shareCurrentSetup;
+
+
+/* ==========================================
+   FULL IMAGE VIEWER
+========================================== */
+
+function openLightbox(src){
+
+  document.getElementById("lightboxImage").src=src;
+  document.getElementById("lightbox").classList.add("active");
+
+}
+
+function closeLightbox(){
+
+  document.getElementById("lightbox").classList.remove("active");
+
+}
+
+document.getElementById("closeLightbox").onclick=closeLightbox;
+
+document.getElementById("lightbox").onclick=e=>{
+  if(e.target.id==="lightbox")closeLightbox();
+};
+
+
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+document.getElementById("menuToggle").onclick=()=>{
+
+  document.getElementById("navLinks").classList.toggle("open");
+
+};
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+  link.addEventListener("click",()=>{
+    document.getElementById("navLinks").classList.remove("open");
+  });
+
+});
+
+
+/* ==========================================
+   KEYBOARD CONTROLS
+========================================== */
+
+document.addEventListener("keydown",e=>{
+
+  if(e.key==="Escape"){
+    closeDrawer();
+    closeLightbox();
+  }
+
+  if(drawer.classList.contains("active")){
+
+    if(e.key==="ArrowRight")goToMedia(currentMediaIndex+1);
+    if(e.key==="ArrowLeft")goToMedia(currentMediaIndex-1);
+
+  }
+
+});
+
+
+/* ==========================================
+   INITIALIZE
+========================================== */
+
+document.getElementById("year").textContent=
+  new Date().getFullYear();
+
+renderCards();
+
+</script>
+
+</body>
+</html>
