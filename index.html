@@ -473,6 +473,37 @@ footer{background:#100010;border-top:1px solid var(--border);padding:26px 0}
   .card-open{padding:9px}
   .price-option strong{font-size:18px}
 }
+
+/* RESPONSIVE + MOBILE BACK/TOUCH POLISH */
+.gallery-track{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y;}
+.drawer{overscroll-behavior:contain;padding-bottom:env(safe-area-inset-bottom);}
+.drawer-content{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.gallery-slide{min-width:100%;}
+.gallery-slide img,.gallery-slide video{max-width:100%;}
+.lightbox{z-index:200;touch-action:pan-y;}
+.lightbox img{user-select:none;-webkit-user-drag:none;}
+button:focus-visible,a:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;}
+@media(max-width:650px){
+  .container{width:min(100% - 30px,1250px);}
+  .hero h1{line-height:1.02;}
+  .setup-card{border-radius:15px;}
+  .card-image{height:clamp(210px,62vw,310px);}
+  .drawer{height:100dvh;height:100svh;}
+  .drawer-content{padding:15px 14px 24px;}
+  .gallery-slide img,.gallery-slide video{height:min(48vh,330px);height:min(48svh,330px);}
+  .drawer-footer{padding:10px 12px calc(10px + env(safe-area-inset-bottom));}
+  .drawer-footer .btn{font-size:9px;padding:12px 8px;}
+  .gallery-arrow{width:34px;height:34px;}
+  .lightbox{padding:12px;}
+  .lightbox img{max-width:100%;max-height:82dvh;}
+}
+@media(max-width:380px){
+  .pricing-grid{gap:8px;}
+  .price-option{padding:12px 9px;}
+  .price-option strong{font-size:17px;}
+  .drawer-header h2{font-size:16px;}
+}
+
 </style>
 </head>
 
@@ -927,8 +958,7 @@ const setups = [
     {type:"image",src:"videos/Setup-7/IMG-20231204-WA0002.jpg",title:"Setup View 03"},
     {type:"image",src:"videos/Setup-7/IMG-20240225-WA0027.jpg",title:"Setup View 04"},
     {type:"video",src:"videos/Setup-7/30--45.mp4",title:"Live Demo 01"},
-    {type:"video",src:"videos/Setup-7/30--45.mp4",title:"Live Demo 02"},
-    {type:"videos/Setup-7/VID_20240101_214238.mp4",title:"Live Demo 04"},
+    {type:"video",src:"videos/Setup-7/VID_20240101_214238.mp4",title:"Live Demo 04"},
     {type:"video",src:"videos/Setup-7/VID-20230515-WA0004.mp4",title:"Live Demo 06"},
     {type:"video",src:"videos/Setup-7/VID-20230527-WA0022.mp4",title:"Live Demo 07"},
     {type:"video",src:"videos/Setup-7/VID-20230527-WA0024.mp4",title:"Live Demo 08"},
@@ -1044,7 +1074,7 @@ function renderCards(){
    OPEN SLIDING DRAWER
 ========================================== */
 
-function openSetup(id){
+function openSetup(id, options={}){
 
   currentSetup = setups.find(s=>s.id===id);
 
@@ -1081,7 +1111,11 @@ function openSetup(id){
   overlay.classList.add("active");
   document.body.style.overflow="hidden";
 
-  history.replaceState(null,"","#setup-"+currentSetup.id);
+  if(!options.fromPopState){
+    const state={happyFloorLayer:"drawer",setupId:currentSetup.id};
+    if(options.replaceHistory) history.replaceState(state,"","#setup-"+currentSetup.id);
+    else history.pushState(state,"","#setup-"+currentSetup.id);
+  }
 
 }
 
@@ -1248,18 +1282,17 @@ galleryTrack.addEventListener("scroll",()=>{
 
   scrollTimer=setTimeout(()=>{
 
-    const width=galleryTrack.clientWidth;
-
-    if(!width)return;
-
-    currentMediaIndex=Math.max(
-      0,
-      Math.min(
-        Math.round(galleryTrack.scrollLeft/width),
-        currentSetup.media.length-1
-      )
-    );
-
+    if(!currentSetup) return;
+    const slides=[...galleryTrack.children];
+    let nearest=0, distance=Infinity;
+    slides.forEach((slide,index)=>{
+      const d=Math.abs(slide.offsetLeft-galleryTrack.scrollLeft);
+      if(d<distance){distance=d;nearest=index;}
+    });
+    currentMediaIndex=nearest;
+    slides.forEach((slide,index)=>{
+      if(index!==nearest) slide.querySelectorAll("video").forEach(video=>video.pause());
+    });
     updateGalleryControls();
 
   },90);
@@ -1274,7 +1307,7 @@ galleryTrack.addEventListener("scroll",()=>{
 document.getElementById("previousSetup").onclick=()=>{
 
   if(currentSetup && currentSetup.id>1){
-    openSetup(currentSetup.id-1);
+    openSetup(currentSetup.id-1,{replaceHistory:true});
   }
 
 };
@@ -1282,7 +1315,7 @@ document.getElementById("previousSetup").onclick=()=>{
 document.getElementById("nextSetup").onclick=()=>{
 
   if(currentSetup && currentSetup.id<8){
-    openSetup(currentSetup.id+1);
+    openSetup(currentSetup.id+1,{replaceHistory:true});
   }
 
 };
@@ -1292,18 +1325,19 @@ document.getElementById("nextSetup").onclick=()=>{
    CLOSE DRAWER
 ========================================== */
 
-function closeDrawer(){
-
-  galleryTrack.querySelectorAll("video").forEach(video=>{
-    video.pause();
-  });
-
+function hideDrawer(){
+  galleryTrack.querySelectorAll("video").forEach(video=>video.pause());
   drawer.classList.remove("active");
   overlay.classList.remove("active");
   document.body.style.overflow="";
+  currentSetup=null;
+}
 
-  history.replaceState(null,"",window.location.pathname+window.location.search);
-
+function closeDrawer(){
+  if(!drawer.classList.contains("active")) return;
+  // A pushed history entry means Back closes the drawer instead of leaving the page.
+  if(history.state && history.state.happyFloorLayer==="drawer") history.back();
+  else hideDrawer();
 }
 
 document.getElementById("closeDrawer").onclick=closeDrawer;
@@ -1428,24 +1462,52 @@ document.getElementById("shareBtn").onclick=shareCurrentSetup;
    FULL IMAGE VIEWER
 ========================================== */
 
-function openLightbox(src){
-
-  document.getElementById("lightboxImage").src=src;
+function showLightbox(){
   document.getElementById("lightbox").classList.add("active");
+  document.body.style.overflow="hidden";
+}
 
+function openLightbox(src){
+  document.getElementById("lightboxImage").src=src;
+  showLightbox();
+  if(!(history.state && history.state.happyFloorLayer==="lightbox")){
+    history.pushState({happyFloorLayer:"lightbox",setupId:currentSetup?.id||null},"",window.location.hash||"#photo");
+  }
+}
+
+function hideLightbox(){
+  document.getElementById("lightbox").classList.remove("active");
+  document.getElementById("lightboxImage").src="";
+  document.body.style.overflow=drawer.classList.contains("active")?"hidden":"";
 }
 
 function closeLightbox(){
-
-  document.getElementById("lightbox").classList.remove("active");
-
+  if(!document.getElementById("lightbox").classList.contains("active")) return;
+  if(history.state && history.state.happyFloorLayer==="lightbox") history.back();
+  else hideLightbox();
 }
 
 document.getElementById("closeLightbox").onclick=closeLightbox;
-
 document.getElementById("lightbox").onclick=e=>{
-  if(e.target.id==="lightbox")closeLightbox();
+  if(e.target.id==="lightbox") closeLightbox();
 };
+
+// Browser / Android back: photo viewer first, then setup drawer.
+window.addEventListener("popstate",event=>{
+  const lightbox=document.getElementById("lightbox");
+  if(lightbox.classList.contains("active")) hideLightbox();
+
+  const hash=window.location.hash;
+  const match=hash.match(/^#setup-(\d+)$/);
+  if(match){
+    const id=Number(match[1]);
+    if(!drawer.classList.contains("active") || currentSetup?.id!==id){
+      openSetup(id,{fromPopState:true});
+    }
+  }else if(drawer.classList.contains("active")){
+    hideDrawer();
+  }
+});
 
 
 /* ==========================================
@@ -1474,8 +1536,8 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 document.addEventListener("keydown",e=>{
 
   if(e.key==="Escape"){
-    closeDrawer();
-    closeLightbox();
+    if(document.getElementById("lightbox").classList.contains("active")) closeLightbox();
+    else if(drawer.classList.contains("active")) closeDrawer();
   }
 
   if(drawer.classList.contains("active")){
@@ -1492,10 +1554,18 @@ document.addEventListener("keydown",e=>{
    INITIALIZE
 ========================================== */
 
-document.getElementById("year").textContent=
-  new Date().getFullYear();
-
+document.getElementById("year").textContent=new Date().getFullYear();
 renderCards();
+
+// Open a setup directly when a shared #setup-N link is visited.
+const initialSetupMatch=window.location.hash.match(/^#setup-(\d+)$/);
+if(initialSetupMatch){
+  const initialId=Number(initialSetupMatch[1]);
+  if(setups.some(setup=>setup.id===initialId)){
+    openSetup(initialId,{fromPopState:true});
+    history.replaceState({happyFloorLayer:"drawer",setupId:initialId},"", "#setup-"+initialId);
+  }
+}
 
 </script>
 
